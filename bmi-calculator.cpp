@@ -18,9 +18,16 @@ int main(){
     string calorieControlledDiet = "Maintain a calorie deficit (-500/day) for weight loss. Focus on lean proteins (chicken, tofu, fish), low-calorie carbs (vegetables, whole grains), and healthy fats (avocado, nuts). Example: Breakfast - egg whites, spinach, whole-grain toast. Lunch - grilled chicken salad with olive oil. Dinner - baked salmon, steamed broccoli, quinoa. Snacks - almonds, low-fat Greek yogurt. Drink water or unsweetened beverages.";
     string exerciseRoutine = "Combine cardio and strength training: 150-300 mins cardio (running, cycling, HIIT) + 2-3 strength sessions/week. Example: Mon/Wed/Fri - 30 mins cardio + 20 mins strength (squats, push-ups, planks). Tue/Thu - 40 mins cycling or brisk walking. Rest/stretch on weekends.";
 
-    //Strings to be displayed to the person of Obesity Category.
-    string weighLossDiet = "Maintain a calorie deficit (500 - 750 kcal). \nFocus on lean proteins (chicken, fish, tofu), complex carbs (quinoa, vegetables), and healthy fats (avocado, nuts). \nAvoid sugary drinks, refined carbs, and processed foods.";
+    //Exercises to be displayed to the person of Obesity Category.
     string weightLossExercise = "Combine cardio (HIIT, brisk walking) 3 - 4 times/week with strength training (squats, push-ups, planks) 3 times/week. \nAdd yoga or stretching daily for recovery.";
+
+    //Different tailored diet plans for each Obesity Class Level.
+    string class1Diet = "For Class 1 obesity, focus on a moderate calorie deficit of around 500 kcal/day. Eat lean proteins like chicken or tofu, low-glycemic carbs such as quinoa and sweet potatoes, and healthy fats from sources like olive oil and avocado. Stick to 3 balanced meals with 1-2 snacks. An example meal could be scrambled eggs with spinach for breakfast, grilled chicken salad for lunch, and baked salmon with sweet potato for dinner.";
+
+    string class2Diet = "In Class 2 obesity, create a larger calorie deficit of 600-750 kcal/day. Include lean proteins like fish and beans, low-glycemic carbs like vegetables and fruits, and healthy fats from nuts and avocado. Aim for 3 meals and 1-2 snacks. A typical day might include Greek yogurt with seeds for breakfast, grilled turkey with quinoa for lunch, and grilled chicken with vegetables for dinner.";
+
+    string class3Diet = "For Class 3 obesity, aim for a more aggressive calorie deficit of 750-1000 kcal/day. Focus on lean proteins like fish and tofu, low-calorie veggies, and small portions of healthy fats like olive oil and nuts. Eat 3 meals with 1-2 snacks. Example meals include a smoothie with protein powder for breakfast, grilled fish with roasted vegetables for lunch, and chicken with a salad for dinner.";
+
 
     cout<<"Welcome to BMI Calculator!"<<endl;
     cout<<"Enter your height in :-"<<endl;
@@ -54,15 +61,15 @@ int main(){
     else if (bmi >= 30)
     {   
         if(bmi >= 30 && bmi < 34.9){
-            cout << "You are classified as Obesity Class 1"<<endl;
+            cout << "You are classified as Obesity Class 1"<<endl<<"Our Diet recommendation for you is :\n"<<class1Diet;
         }
         else if(bmi >= 35 && bmi < 39.9){
-            cout << "You are classified as Obesity Class 2"<<endl;
+            cout << "You are classified as Obesity Class 2"<<endl<<"Our Diet recommendation for you is :\n"<<class2Diet;
         }
         else if(bmi >= 40){
-            cout << "You are classified as Obesity Class 3"<<endl;
+            cout << "You are classified as Obesity Class 3"<<endl<<"Our Diet recommendation for you is :\n"<<class3Diet;
         }
-        cout<<"Diet Recommendation:\n"<<weighLossDiet<<endl<<"Exercise Recommendation:\n"<<weightLossExercise;
+        cout<<"Exercise Recommendation:\n"<<weightLossExercise<<endl<<"Professional guidance from a healthcare provider or nutritionist is highly advised to ensure safe weight loss and address any potential underlying health concerns.";
     }
 
     return 0;
