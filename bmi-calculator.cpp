@@ -10,7 +10,7 @@ int main(){
     string highCalorieDiet = "Focus on a calorie surplus: +300-500/day. \nInclude proteins (eggs, chicken, fish), carbs (rice, oats, pasta), healthy fats (nuts, avocados, olive oil), and snacks (smoothies, trail mix). \nExample meal: Breakfast - scrambled eggs, toast, avocado, milk. \nLunch - grilled chicken, quinoa, veggies. Dinner - salmon, brown rice, salad. Snack - yogurt, fruits, peanut butter.";
     string weightGainExercises = "Strength training: 3-5 days/week. \nKey lifts: Squats, Deadlifts, Bench Press, Rows, Pull-Ups. \nWeekly routine: \nDay 1 - Upper Push (Bench, Shoulder Press), \nDay 2 - Lower (Squats, Deadlifts), \nDay 4 - Upper Pull (Pull-Ups, Rows), \nDay 5 - Full Body (Power Cleans, Bulgarian Squats). \nRest on other days. Use progressive overload and track progress.";
 
-    //Strings to be displayed to the person of Normal Category.
+    //Strings to be displayed to the person of Normal Weight Category.
     string balancedDiet  = "Balanced Diet: Eat whole grains, lean proteins, healthy fats, fruits, and veggies. \nStay hydrated (8-10 glasses water/day). Avoid processed foods.";
     string aerobicExercises = "Do 150 mins/week of aerobic exercise (walk, jog, cycle). \nAdd 2-3 days of strength training and flexibility exercises (yoga, stretching). \nRest: Sleep 7-9 hours daily and take recovery days.";
 
@@ -23,7 +23,7 @@ int main(){
     string weightLossExercise = "Combine cardio (HIIT, brisk walking) 3 - 4 times/week with strength training (squats, push-ups, planks) 3 times/week. \nAdd yoga or stretching daily for recovery.";
 
     cout<<"Welcome to BMI Calculator!"<<endl;
-    cout<<"Enter your height in :"<<endl;
+    cout<<"Enter your height in :-"<<endl;
     
     cout << "Feets: ";
     cin >> heightFeets;
@@ -44,12 +44,12 @@ int main(){
     if (bmi < 18.5){
         cout << "You are classified as Underweight"<<endl<<"Diet Recommendation:\n"<<highCalorieDiet<<endl<<"Exercise Recommendation:\n"<<weightGainExercises;
     } 
-    else if (bmi >= 18.5 && bmi < 24.5){
-        cout << "You are classified as Normal weight"<<endl<<"Diet Recommendation:\n"<<balancedDiet<<endl<<"Exercise Recommendation:\n"<<aerobicExercises;
+    else if (bmi >= 18.5 && bmi < 24.9){
+        cout << "You are classified as Normal Weight"<<endl<<"Diet Recommendation:\n"<<balancedDiet<<endl<<"Exercise Recommendation:\n"<<aerobicExercises;
     }
-    else if (bmi >= 24.5 && bmi < 29.9)
+    else if (bmi >= 25 && bmi < 29.9)
     {
-        cout <<"You are classified as Normal Overweight"<<endl<<"Diet Recommendation:\n"<<calorieControlledDiet<<endl<<"Exercise Recommendation:\n" <<exerciseRoutine;
+        cout <<"You are classified as Overweight"<<endl<<"Diet Recommendation:\n"<<calorieControlledDiet<<endl<<"Exercise Recommendation:\n" <<exerciseRoutine;
     }
     else if (bmi >= 30)
     {   
