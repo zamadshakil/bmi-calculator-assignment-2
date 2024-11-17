@@ -22,7 +22,9 @@ int main(){
     heightMeters = (heightFeets * 0.3048) + (heightInches * 0.0254);
     
     double bmi = weight / (heightMeters * heightMeters);
-    cout<<"BMI value is: "<<setprecision(2)<<bmi<<endl;
+    cout<<"BMI value is: "<<setprecision(3)<<bmi<<endl;
+    
+
 
 
 
